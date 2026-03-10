@@ -11,6 +11,10 @@ import os
 
 app = FastAPI()
 
+
+@app.get("/")
+def read_root(): return {"Hello": "World"}
+
 # Create uploads directory if it doesn't exist
 UPLOAD_DIR = "uploads"
 if not os.path.exists(UPLOAD_DIR):
